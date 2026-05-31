@@ -28,3 +28,18 @@ print("Number of 6s =", count_6)
 print("Number of 1s =", count_1)
 
 print("Two 6s in a row =", two_6)
+
+# Question 2
+
+for i in range(1, 6):
+
+    print("You did", i, "jumping jacks")
+
+    answer = input("Are you tired? ")
+
+    if answer == "yes":
+        print("You completed total jumping jacks:", i)
+        break
+
+else:
+    print("Congratulations! You completed the workout")
