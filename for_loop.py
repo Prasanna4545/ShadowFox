@@ -31,15 +31,30 @@ print("Two 6s in a row =", two_6)
 
 # Question 2
 
-for i in range(1, 6):
+# Question 2
 
-    print("You did", i, "jumping jacks")
+total_jumping_jacks = 100
+completed = 0
+
+for i in range(1, 11):
+
+    completed = completed + 10
+
+    print("You completed", completed, "jumping jacks")
+
+    if completed == 100:
+        print("Congratulations! You completed the workout")
+        break
 
     answer = input("Are you tired? ")
 
-    if answer == "yes":
-        print("You completed total jumping jacks:", i)
+    if answer == "yes" or answer == "y":
+
+        print("You completed a total of", completed, "jumping jacks")
         break
 
-else:
-    print("Congratulations! You completed the workout")
+    elif answer == "no" or answer == "n":
+
+        remaining = total_jumping_jacks - completed
+
+        print(remaining, "jumping jacks remaining")
